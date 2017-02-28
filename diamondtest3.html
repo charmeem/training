@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Printing Diamond shape</h1>
+<input type="text" id = "Rows" placeholder = "Enter Diamond heights in Odd number" >
+<button onclick="diamond()">Enter</button>
+
+<p>  We will draw Diamond shape using nested for loop in two parts: upper part and lower part</p>
+<p>  Rows in upper part are always one more then the rows in lower part</p>
+<p id="demo"></p>
+
+<script>
+function diamond() {
+var totalRows = parseInt(document.getElementById("Rows").value);
+
+var  upperRows = (totalRows + 1)/2,
+	 currentRow,
+	 lowerRows = upperRows-1,
+	 space,
+	 star,
+	 output1="",
+	 output2="";
+document.getElementById("demo").innerHTML = "";
+//Drawing Upper portion of Diamond
+for ( currentRow=1; currentRow<=upperRows ; currentRow++) { 
+	for ( space = 1; space<=upperRows-currentRow; space++){
+		output1 +="^";  //draw spaces
+	}
+	for ( star =1; star<= 2*currentRow - 1; star++){
+		output2 += "*";  //draw stars 
+		}
+		var full = output1.concat(output2);
+		document.getElementById("demo").innerHTML += full + "</br>";
+		//reset counters
+		output1='';
+		output2='';
+}
+
+//Drawing lower portion 
+for ( currentRow = lowerRows;currentRow >= 1;currentRow-- ) {
+	for ( space =1; space<= upperRows - currentRow ; space++ ) {
+		output1 +="^";  //draw spaces
+	}
+	for ( star = 1; star <= 2*currentRow - 1; star++ ) {
+		output2 += "*";  //draw stars
+	}
+	var full = output1.concat(output2);
+	
+	document.getElementById("demo").innerHTML += full + "</br>";
+	//reset counters
+	output1='';
+	output2='';
+}
+}	 
+</script>
+
+</body>
+</html>
+
+
+
+

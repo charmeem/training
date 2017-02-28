@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Printing Diamond shape</h1>
+
+<p>We will draw Diamond shape using nested for loop in two parts:upper part and lower part</p>
+<p>  Rows in upper part are always one more then the rows in lower part</p>
+<p id="demo"></p>
+
+<script>
+function diamond(arr) {
+  var len = arr.length;
+  var mid = Math.floor(len / 2);
+  for (var i = 0; i < len; i++) {
+    var d = Math.abs(i - mid);
+    for (var j = d; j < len - d; j++) {
+      arr[i][j] = arr[i][j] = 1;
+    }
+  }
+  return arr;
+}
+
+document.getElementById("demo").innerHTML = diamond(6,7,8);
+</script>
+
+</body>
+</html>
+
+
+
+

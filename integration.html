@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Integration Rules</h1>
+<p> Calculate integration of f1(x) + f2(x)</p>
+<p> x - Angle</p>
+<p>Selct x , f1 and f2 from the dropdown list</p>
+
+
+<input type="text" id = "f1" placeholder = "Enter function 1" >
+<input type="text" id = "f2" placeholder = "Enter function 2" >
+<input type="text" id = "angle" placeholder = "Enter angle" >
+
+<button onclick="integral()">Enter</button>
+
+
+
+<p id="demo"></p>
+
+<script>
+function rules() {
+	var sinx, cosx, tanx;
+					console.log(f1);
+
+	// Ingeration rules
+	if ( f = sinx) {
+		return f = cos(angle);
+				//console.log("f");
+
+	} else if (f = cosx) {
+		return f = sin(angle);
+	} else if (f = tanx) {
+		return f = sec(angle);
+	}
+	
+	}
+function integral() {
+	
+	var angle = document.getElementById("angle").value;
+
+	var f = document.getElementById("f1").value;
+	var function1 = rules();
+//console.log(function1);
+
+	var f = document.getElementById("f2").value;
+	var function2 = rules();
+
+	var integration = Math.function1 + Math.function2;
+		//console.log(integration);
+	document.getElementById("demo").innerHTML = integration;
+}
+
+</script>
+
+</body>
+</html>
+
+
+
+

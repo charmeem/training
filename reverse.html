@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>String reversal</h1>
+<p> This Simple program will reverse a string input</p>
+<input type="text" id = "s" placeholder = "Enter a string" >
+<button onclick="reverse()">Enter</button>
+
+
+<p id="demo"></p>
+
+<script>
+function reverse() {
+var string = document.getElementById("s").value;
+var result = '';
+
+for (i=string.length-1;i>=0 ;i--) {
+		result += string[i];
+	document.getElementById("demo").innerHTML = result;	
+	}
+
+}	 
+</script>
+
+</body>
+</html>
+
+
+
+

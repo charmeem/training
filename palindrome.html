@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Check for Palindrome</h1>
+<p> Check if the string you entered is palindrome?</p>
+<input type="text" id = "s" placeholder = "Enter a string" >
+<button onclick="palindrome()">Enter</button>
+
+
+<p id="demo"></p>
+
+<script>
+function reverse() {
+	string = document.getElementById("s").value;
+	var result = '';
+
+	for (i=string.length-1;i>=0 ;i--) {
+		result += string[i];
+		
+		//document.getElementById("demo").innerHTML = result;	
+		}
+	return result;
+}	
+function palindrome() {
+	var r = reverse();
+	if (r == string) {
+		document.getElementById("demo").innerHTML = "This is Palindrome!";
+		}
+	else
+			document.getElementById("demo").innerHTML = "Sorry Try again";
+
+} 
+			document.getElementById("s").value = '';	
+
+</script>
+
+</body>
+</html>
+
+
+
+
