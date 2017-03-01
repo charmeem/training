@@ -8,7 +8,7 @@
 
 Function1: <input type="text" id = "f1" placeholder = "Enter function 1 e.g sin" size = "25">
 Function2: <input type="text" id = "f2" placeholder = "Enter function 2 e.g cos" size = "25" >
-Angle:     <input type="text" id = "angle" placeholder = "Enter angle" ></br></br>
+Angle in radians:     <input type="text" id = "angle" placeholder = "Enter angle in radians" ><br><br>
 
 <button onclick="integral()">Enter</button>
 
@@ -19,15 +19,16 @@ Angle:     <input type="text" id = "angle" placeholder = "Enter angle" ></br></b
 <script>
 
 function rules(f) {
-	var sinx, cosx, tanx;
+	//var sinx, cosx, tanx;
 	// Ingeration rules
-	if ( f = "sin") {
-		return f = Math.cos(angle);
-	} else if (f = "cos") {
-		return f = Math.sin(angle);
-	} else if (f = tanx) {
-		return f = sec(angle);
-	}
+	if ( f == "sin") {
+		 var integral = - Math.cos(angle);
+		 		console.log(integral);
+
+		return integral;
+	} else if (f == "cos") {
+		return integral = Math.sin(angle);
+	} 
 }
 
 function integral() {
@@ -35,11 +36,11 @@ function integral() {
 	 f1= document.getElementById("f1").value;
 	 f2= document.getElementById("f2").value;
 
-	var function1 = rules(f1);
-	var function2 = rules(f2);
-	var total = function1 + function2;
+	var result = rules(f1);
+		result += rules(f2);
+	
 
-	document.getElementById("demo").innerHTML = "Integration of " + f1+ "(" + angle + ")" + " + " + f2 + "(" + angle + ")" + " is " + total;
+	document.getElementById("demo").innerHTML = "Integration of " + f1+ "(" + angle + ")" + " + " + f2 + "(" + angle + ")" + " is " + result;
 }
 
 </script>
