@@ -185,3 +185,4 @@ foreach ($example as $value) {
     echo ") = ";
     var_dump(empty($value));
 }
+
