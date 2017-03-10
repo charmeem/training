@@ -71,8 +71,22 @@ $b = "Light";
 $b .= $a;
 echo "<br>";
 echo $b;
+echo "<br>";
 	
- 
- 
+/**
+ * Bitwise operators
+ *
+ * shift left <<  Multiplication by 2
+ * Shift right >> division by 2
+ */
+$a = 1;
+echo "<br>";
+echo $a << 5; 
 
+$b = 64;
+echo "<br>";
+echo $b >> 5;
+echo "<br>";
+
+ 
 
