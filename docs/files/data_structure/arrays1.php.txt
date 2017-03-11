@@ -1,0 +1,78 @@
+<?php
+/**
+ * Learning Arrays in PHP.
+ *
+ * 
+ * @package    array1
+ * @subpackage 
+ * @license    http://opensource.org/licenses/gpl-license.php  GNU Public License
+ * @author     Muhammad Mubashir Mufti <mmufti@hotmail.com>
+ */
+/**
+ * Mixed array Example
+ *
+ */
+$array1 = array (
+    "string"   => 'a',
+	"2" => 2,
+	100   => -100,
+	"number" => '100',
+);
+var_dump($array1);
+
+/**
+ * Array Modification
+ * In key => value array, key is the index to address array element.
+ * Whereas in array without key the index is used to address array element
+ */
+$array1[1] = 11;
+$array1[2] = 'modified';
+$array1[100] = 'modified';
+$array1[] = 44;
+var_dump($array1);
+ 
+/**
+ * Type casting and Overwriting Example
+ *
+ */
+$array2 = array (
+    1   => 'a',
+	"1" => 'b',
+	2   => 'c',
+	1 => 'd',
+	true => 'e',
+);
+var_dump($array2);
+
+/**
+ * Indexed Array without key
+ *
+ */
+$array3 = array (
+    "one",
+	"two",
+	"three",
+	"four",
+);
+var_dump($array3);
+var_dump($array3[0]);
+
+/**
+ * More mix Array	 Example
+ *
+ */
+$array3 = array (
+    "one",
+	"two",
+	"11" => 3,
+	"three",
+	"four",
+	"five",
+	"3",
+	"4" => '4',
+);
+var_dump($array3);
+var_dump($array3[4]);
+
+
+

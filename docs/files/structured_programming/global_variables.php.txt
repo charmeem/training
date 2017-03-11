@@ -1,0 +1,34 @@
+<?php
+/**
+ * Learning Global variables in PHP.
+ *
+ * Two Function calls are made.
+ * First will pass while the second will fail
+ * Reason: The one with globally defined vars will pass.
+ *
+ * @package    global_vars
+ * @subpackage 
+ * @license    http://opensource.org/licenses/gpl-license.php  GNU Public License
+ * @author     Muhammad Mubashir Mufti <mmufti@hotmail.com>
+ */
+$a = "Hello";
+$b = "World";
+
+function hello() 
+{
+    global $a, $b;
+    echo "$a $b" . "<br>" . "<br>";
+}
+hello();
+ 
+ 
+ 
+$a = "Hello";
+$b = "World";
+
+function helloFail() 
+{
+    echo "$a $b";
+}
+echo "Following Function''Output will Fail as its variables are not globaly defined";
+helloFail();
