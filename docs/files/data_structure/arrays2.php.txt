@@ -28,3 +28,14 @@ print_r($array1);
 $array1[] = 21;
 print_r($array1);
 
+/**
+ * Filling an Array with files
+ *
+ */
+$dir = ".";
+$handle = opendir($dir);
+while (false !== ($file = readdir($handle))) {
+    $files[] = $file;
+}
+closedir($handle);
+var_dump($files);
