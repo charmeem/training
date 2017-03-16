@@ -1,0 +1,51 @@
+
+<?php
+/**
+ * Checking variable types.
+ *
+ * Further evolved and Concise Version of variables2.php and class1.php
+ * Test vars and the type of tests are stored in arrays in constructor
+ * and can be changed there. 
+ *
+ * @param array $type
+ * @package    class2
+ * @subpackage 
+ * @license    http://opensource.org/licenses/gpl-license.php  GNU Public License
+ * @author     Muhammad Mubashir Mufti <mmufti@hotmail.com>
+ */
+class VarTest 
+{
+    public $example;
+	public $testArray;
+    public function __construct()
+	{
+	     $this->example = array (1, 'test', 8.908, ['hello', '1', 999], null, " ", true, false);
+		 $this->testArray = array ('Variable Type', "intval", "floatval", "strval", "is_int",
+                    "is_float", "is_string", "is_array", "is_object");
+
+   }
+   
+    public function loop($type) 
+	{
+	    foreach ($this->example as $value) {
+		    echo "$type of (";
+		    var_export($value);
+		    echo ") = ";
+			if ($type != "Variable Type") {
+            var_dump($type($value));
+            } else {
+			    var_dump($value);
+				}			
+		}
+	}
+	public function output()
+	{
+	    foreach ($this->testArray as $type) {
+		echo ($this->loop($type));
+		}
+	}
+}
+
+$instance = new VarTest();
+$instance->output();
+

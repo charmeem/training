@@ -2,10 +2,10 @@
 /**
  * Learning Namespace in PHP.
  *
- * This File includes namespace1.php to demonstrate
+ * This File includes namespace.php to demonstrate
  * Basic functionality of namespace
  *
- * @package    namespace1
+ * @package    namespace
  * @subpackage 
  * @license    http://opensource.org/licenses/gpl-license.php  GNU Public License
  * @author     Muhammad Mubashir Mufti <mmufti@hotmail.com>

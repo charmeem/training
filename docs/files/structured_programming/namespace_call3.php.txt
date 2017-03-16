@@ -2,7 +2,7 @@
 /**
  * Learning Namespace in PHP.
  *
- * This File includes namespace1.php
+ * This File includes namespace.php
  * Demonstrating 'use' and alias with instances of Class 'Learning'
  *
  * @package    namespace2
