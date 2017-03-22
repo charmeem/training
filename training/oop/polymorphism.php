@@ -5,19 +5,19 @@
  *
  * Calculates price and area of different products of same type
  * Area of different shapes like circle and rectangles are calculated differently
- * but they all belongs to same type i.e. Shapes, which is also called interface.
+ * but they all belongs to same type\interface i.e. Shapes.
  * This is Polymorphism.
  * 
- * @param $text $color
- * @package    abstract
+ * @param $text $width $height $radius
+ * @package    polymorphism
  * @subpackage 
  * @license    http://opensource.org/licenses/gpl-license.php  GNU Public License
  * @author     Muhammad Mubashir Mufti <mmufti@hotmail.com>
  */
 
- interface Shape 
- {
-     public function getArea();
+interface Shape 
+{
+    public function getArea();
 }
 
 class Rect implements Shape

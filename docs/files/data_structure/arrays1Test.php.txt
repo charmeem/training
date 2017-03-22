@@ -14,7 +14,7 @@ Class arrays1Test extends TestCase
 {
     public function testOutput() {
 	    foreach ($array1 as $i => $value) {
-		    print_r ($array1[$i])
+		    print_r ($array1[$i]);
 		}
     }
 }
